@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+
+  santiago-tests:
+    container_name: santiago-proof
+    image: santiago-cucumber:latest
+    build: 
+      context: ./Pruebas-proyecto
+      dockerfile: Dockerfile
+    # volumes: # Uncommend when you want develop
+    #   - ./Pruebas-proyecto:/test-app
+    networks:
+      - sitefodi
+
+  # Selenium server
+  selenium_server:
+    container_name: selenium_server
+    image: selenium_server
+    shm_size: 2gb
+    build: 
+      context: ./selenium_server
+      args:
+        - CUCUMBER_JSRL_CHROMEDRIVER_VERSION=111.0.5563.64
+        - CUCUMBER_JSRL_CHROMEDRIVER_FILE=chromedriver_linux64.zip
+        - CUCUMBER_JSRL_SELENIUM_SERVER_VERSION=selenium-4.8.0
+        - CUCUMBER_JSRL_SELENIUM_SERVER_FILE=selenium-server-4.8.2.jar
+        - CUCUMBER_JSRL_SELENIUM_HTTP_JDK_CLIENT_VERSION=4.8.2
+        - CUCUMBER_JSRL_SELENIUM_HTTP_JDK_CLIENT_FILE=selenium-http-jdk-client-4.8.2.jar
+        - CUCUMBER_JSRL_NO_VNC_VERSION=1.4.0
+        - CUCUMBER_JSRL_WEBSOCKIFY_VERSION=0.11.0
+    ports:
+      - 4444:4444
+      - 7900:7900
+      - 5900:5900
+    networks:
+      - sitefodi
+
+  # Basic selenium exercise
+  cucumber_selenium:
+    container_name: cucumber_selenium
+    image: cucumber_selenium_tutorial
+    build: ./selenium_tutorial
+    volumes:
+      - ./selenium_tutorial:/usr/src/app
+    networks:
+        - sitefodi
+
+networks:
+  sitefodi:
+    name: sitefodi_net

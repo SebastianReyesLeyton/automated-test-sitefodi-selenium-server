@@ -1,0 +1,12 @@
+[network]
+relax-checks = true
+
+[node]
+detect-drivers = false
+max-sessions = 1
+
+[[node.driver-configuration]]
+display-name = "chrome"
+stereotype = "{\"browserName\": \"chrome\", \"browserVersion\": \"111\", \"se:noVncPort\": 7900 ,\"platformName\": \"Linux\", \"goog:chromeOptions\": {\"args\": [\"--remote-allow-origins=*\"]}, \"se:vncEnabled\": true}"
+webdriver-executable = '/usr/bin/chromedriver'
+max-sessions = 1

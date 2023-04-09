@@ -1,0 +1,20 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js ./features",
+    "test-npx": "npx cucumber-js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.0.1"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.8.1"
+  }
+}
