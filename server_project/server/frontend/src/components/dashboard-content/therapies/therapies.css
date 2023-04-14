@@ -1,0 +1,126 @@
+.therapies-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.therapies-container .title {
+    color: #edf2f4;
+    font-weight: bold;
+}
+
+.therapies-container .therapies-content {
+    height: calc(80% - 0.7rem);
+    width: 90%;
+    margin: 0.85rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.therapies-container .therapies-content .therapy-card {
+    width: clamp(12rem,80%,14rem);
+    height: 7rem;
+    margin: 0.25rem;
+    border-radius: 0.45rem;
+    background-color: rgba(232, 237, 248, 0.082);
+    transition: all ease-in-out 500ms;
+    overflow: hidden;
+}
+
+.therapies-container .therapies-content .therapy-card .therapy-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.25rem 0.35rem;
+    width: calc(100% - 0.35rem*2);
+    height: calc(80% - 0.25rem);
+    border-radius: 0.45rem;
+    transition: all ease-in-out 300ms;
+}
+
+.therapies-container .therapies-content .therapy-card .therapy-content .card-title {
+    font-weight: bold;
+    color: #edf2f4;
+    font-size: 1.15rem;
+}
+
+.therapies-container .therapies-content .therapy-card .therapy-content .therapy-time {
+    font-weight: bold;
+    color: #9fa2a3;
+    font-size: 0.65rem;
+}
+
+.therapies-container .therapies-content .therapy-card .therapy-content .therapy-time .icon {
+    margin-right: 0.15rem;
+}
+
+.therapies-container .therapies-content .therapy-card .therapy-content .state {
+    
+    border-radius: 0.25rem;
+    margin-top: 0.6rem;
+    padding: 0.15rem 0.7rem !important;
+    background-color: blue;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    padding: 0.1rem;
+    color: #edf2f4;
+}
+
+.therapies-container .therapies-content .therapy-card .therapy-tooltip {
+    background-color: rgba(15, 54, 139, 0.658);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding-top: 10%;
+    height: 90%;
+    transition: all ease-in-out 300ms;
+    color: #edf2f4;
+}
+
+.therapies-container .therapies-content .therapy-card .therapy-tooltip .therapy-tooltip-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.therapies-container .therapies-content .therapy-card:hover > .therapy-content {
+    margin-top: -40%;
+}
+
+.therapies-container .therapies-content .therapy-card:hover > .therapy-tooltip {
+    height: 100%;
+    padding: 0;
+}
+
+.button {
+    background-color: rgba(33, 157, 188, 0.164) !important;
+    font-weight: bold;
+    text-decoration: none;
+    color: white !important;
+    padding: 0.5rem 0.6rem !important; 
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-size: 0.85rem !important;
+    margin: 0.25rem;
+    line-height: 1.75;
+    text-transform:uppercase;
+    text-align: center;
+}
+
+.button:hover {
+    color: #d6ccc2;
+    cursor: pointer;
+}

@@ -1,0 +1,109 @@
+.sidebar {
+    display: grid;
+    grid-template-rows: clamp(5rem, 80%, 7rem) 1fr 2rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 0.65rem;
+    height: calc(100% - 1rem);
+    flex: 1;
+    margin: 0.5rem;
+    animation: sidebarEffect 500ms;
+}
+
+@keyframes sidebarEffect {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.sidebar .top {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar .top .logo {
+    width: 60%;
+    height: 80%;
+    margin: 5% 0;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 0.65rem;
+}
+
+.sidebar .top .logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.sidebar .center {
+    flex: 4;
+    padding-left: 0.8rem;
+    overflow: auto;
+}
+
+.sidebar .center ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar .center ul .option-group-title {
+    font-size: 0.65rem;
+    font-weight: 900;
+    color: #f1faee;
+    margin-top: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar .center ul li {
+    display: flex;
+    width: calc(100% - 1rem);
+    align-items: center;
+    padding: 0.28rem 0.25rem;
+    cursor: pointer;
+    transition: all ease-in-out 250ms;
+}
+
+.sidebar .center ul li:hover {
+    width: calc(100% - 1rem - 0.5rem);
+    margin-left: 0.5rem;
+}
+
+.sidebar .center ul li a {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1.3rem 1fr ;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar .center ul li i {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar .center ul li .icon {
+    font-size: 1.125rem;
+    color: #219ebc;
+}
+
+.sidebar .center ul li span {
+    font-size: 0.813rem;
+    font-weight: 600;
+    color: #f1faee;
+    margin-left: 0.625rem;
+}
+
+.sidebar .bottom {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .bottom span {
+    color: #999;
+    font-size: 0.6rem;
+    margin-left: 0.85rem;
+}

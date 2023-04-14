@@ -1,0 +1,93 @@
+.auth-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #01013a;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container .auth-card {
+    display: grid;
+    position: relative;
+    width: 80%;
+    height: 90%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 0.65rem;
+    grid-template-columns: 45% 1fr;
+    transition: all ease-in-out 500ms;
+    animation: loginEffect 500ms;
+}
+
+@keyframes loginEffect {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.auth-container .auth-card .auth-form {
+    display: flex;
+    padding: 3rem;
+    height: calc(100% - 3rem*2);
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+}
+
+.auth-container .auth-card .auth-form .login-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all ease-in-out 500ms;
+    animation: loginEffect 1000ms;
+}
+
+@keyframes loginEffect {
+    0% {
+        margin-left: 100%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+.auth-container .auth-card .auth-form .login-form .title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.auth-container .auth-card .auth-form .login-form .input-group {
+    margin-top: clamp(0.3rem, 10%, 0.8rem);
+}
+
+.auth-container .auth-card .auth-form .login-form .login-button {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #1d3557;
+}
+
+.auth-container .auth-card .auth-complement {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items:flex-end;
+    overflow: hidden;
+    justify-content: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+}
+
+.auth-container .auth-card .auth-complement span {
+    margin: 0 0 1.75rem 1.25rem;
+    color: #999;
+    inline-size: 16rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    overflow-wrap: break-word;
+}

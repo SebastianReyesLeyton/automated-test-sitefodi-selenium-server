@@ -31,6 +31,29 @@ def step_impl(ctx):
     submit = ctx.driver.find_element(by = By.CSS_SELECTOR, value = '#root > div > div > section.auth-form > form > button')
     submit.click()
 
+@given("Una prueba creada")
+def step_impl(ctx):
+    global new_val
+    # Process of clicking to create
+    create_button = ctx.driver.find_element(by = By.CSS_SELECTOR, value = '#root > div > div > div.sidebar > div.center > ul > div:nth-child(2) > li:nth-child(2) > a > span')
+    create_button.click()
+
+    # Type name and description
+    name_input = ctx.driver.find_element(by = By.CSS_SELECTOR, value = '#root > div > div > div.dashboard-content-container > div.dashboard-content > div > section > form > section.register-form-inputs > div:nth-child(1) > div > div > input')
+    name_input.send_keys(f"Prueba aleatoria y nueva{new_val}")
+    desc_input = ctx.driver.find_element(by = By.CSS_SELECTOR, value = '#root > div > div > div.dashboard-content-container > div.dashboard-content > div > section > form > section.register-form-inputs > div:nth-child(2) > div > div > textarea')
+    desc_input.send_keys(f"Prueba aleatoria y nueva{new_val}")
+
+    send_button = ctx.driver.find_element(by = By.CSS_SELECTOR, value = '#root > div > div > div.dashboard-content-container > div.dashboard-content > div > section > form > section.buttons-section > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.login-button.css-sghohy-MuiButtonBase-root-MuiButton-root')
+    send_button.click()
+    time.sleep(1)
+
+    res = ctx.driver.find_element(by = By.CSS_SELECTOR, value = '#root > div > div > div.dashboard-content-container > div.dashboard-content > div > div > div.MuiAlert-message.css-1pxa9xg-MuiAlert-message > div > span:nth-child(2)').text
+    ans1 = "Ya existe un test con ese nombre"
+    ans2 = "Ya tiene una carpeta asociada"
+    new_val += 1
+    assert (res != ans1 and res != ans2) is True
+
 @when('Creo una pregunta tipo carta en una prueba creada')
 def step_impl(ctx):
     # Edit the test

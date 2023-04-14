@@ -1,0 +1,33 @@
+.card-question-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 88%;
+    margin: auto;
+}
+
+.card-question-container .info-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-question-container .info-question .image {
+    margin: 1rem 0 0.5rem 0;
+    width: 70%;
+    border-radius: 0.25rem;
+}
+
+.card-question-container .info-question .submit-button {
+    position: absolute;
+    bottom: 2%;
+    right: 1.2%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 0.45rem;
+    padding: 0.55rem 1rem;
+    color: #f1faee !important;
+    background-color: #0645aa !important;
+}

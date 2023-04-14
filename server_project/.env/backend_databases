@@ -1,0 +1,4 @@
+BACKEND_USERS_DATABASE=sitefodi_users
+BACKEND_TESTS_DATABASE=sitefodi_tests
+BACKEND_THERAPHIES_DATABASE=sitefodi_theraphy
+BACKEND_RESULTS_DATABASE=sitefodi_results

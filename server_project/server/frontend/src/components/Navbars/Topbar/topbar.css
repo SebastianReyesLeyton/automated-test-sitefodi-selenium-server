@@ -1,0 +1,117 @@
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    height: clamp(2.5rem, 80%, calc(3.5rem - 0.4rem));
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 0.65rem;
+    animation: sidebarEffect 700ms;
+}
+
+@keyframes sidebarEffect {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.topbar .profile-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 11rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 0.6rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0.12rem;
+    padding: 0 0.2rem;
+    transition: all ease-in-out 300ms;
+}
+
+.topbar .profile-container .profile-avatar {
+    display: flex;
+    align-items: center;
+    width: clamp(2.2rem, 80%, calc(2.5rem - 0.4rem ));
+    border-radius: 50%;
+}
+
+.topbar .profile-container .profile-avatar .avatar {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.topbar .profile-container .profile-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.2rem;
+    height: clamp(2.2rem, 80%, calc(2.5rem - 0.4rem ));
+    width: 8rem;
+    overflow: hidden;
+}
+
+.topbar .profile-container .profile-info .name {
+    color: #f1faee;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+
+.topbar .profile-container .profile-info .rol {
+    color: #8ecae6;
+    font-size: 0.7rem;
+}
+
+.topbar .profile-container .icon {
+    font-size: 0.8rem;
+    margin-right: 0.25rem;
+    color: #edf2f4;
+    transition: all ease-in-out 500ms;
+}
+
+.topbar .profile-container .icon:hover {
+    cursor: pointer;
+    transform: rotate(-180deg);
+}
+
+.topbar .profile-container .collapse-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    width: 8rem;
+    border-radius: 0.65rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+}
+
+.topbar .profile-container .collapse-menu ul {
+    list-style: none;
+}
+
+.topbar .profile-container .collapse-menu ul li {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    color: #edf2f4;
+    transition: all ease-in-out 300ms;
+}
+
+.topbar .profile-container .collapse-menu ul li:hover {
+    margin-left: 0.15rem;
+    color: #f1faee;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.topbar .profile-container .collapse-menu ul li .icon {
+    font-size: 0.8rem;
+    margin-right: 0.25rem;
+}

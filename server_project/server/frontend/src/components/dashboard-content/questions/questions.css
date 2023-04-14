@@ -1,0 +1,148 @@
+.question-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.question-container .title {
+    color: #edf2f4;
+    font-weight: bold;
+}
+
+.question-container .question-content {
+    height: 80%;
+    width: 92.5%;
+    margin: 0.35rem;
+}
+
+.question-container .question-content .question-form {
+    display: grid;
+    grid-template-rows: 6fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    width: 100%;
+    height: calc(100% - 0.5rem);
+    overflow: auto;
+}
+
+.question-container .question-content .question-form .question-form-content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+.question-container .question-content .question-form .question-form-content .patient-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem;
+    flex-direction: column;
+    height: calc(100% - 0.2rem*2) ;
+}
+
+.question-container .question-content .question-form .question-form-content .therapist-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    flex-direction: column;
+    height: calc(100% - 0.2rem*2) ;    
+}
+
+.section-title {
+    margin-top: 0.15rem;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 0.15rem * 2);
+    height: 85%;
+    margin: 0.3rem 0.15rem;
+}
+
+.section-content .image-visualizator {
+    width: 5rem;
+    border-radius: 0.25rem;
+}
+
+.section-content .input-group,
+.section-content .input-group-file {
+    width: clamp(200px, 85%, 20rem);
+    margin: 0.25rem 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-content .input-group-file {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.3rem;
+    border: 1px solid #f1faee;
+    box-sizing: border-box;
+    padding: 0.15rem;
+}
+
+.section-content .input-group div {
+    color: #f1faee !important;
+}
+
+.section-content .input-group input {
+    color: #f1faee !important;
+}
+
+.section-content .input-group label {
+    color: #f1faee !important;
+}
+
+.section-content .input-group fieldset {
+    border-color: #f1faee !important;
+}
+
+.section-content input[type=file] {
+    color: white;
+    border-radius: 0.3rem;
+    width: 100%;
+}
+
+.section-content input[type=file]::file-selector-button {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem 0 0 0.25rem;
+    transition: all ease-in-out 300ms;
+    cursor: pointer;
+} 
+
+.buttons-section {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons-section .send-button {
+    background-color: #219ebc;
+    font-weight: bold;
+    width: 45%;
+}
+
+.buttons-section .send-button:hover {
+    background-color: #219ebc;
+}
+
+.buttons-section .back-button {
+    background-color: #5e548e;
+    font-weight: bold;
+    width: 45%;
+}
+
+.buttons-section .back-button:hover {
+    background-color: #5e548e;
+}

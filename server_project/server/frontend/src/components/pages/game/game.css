@@ -1,0 +1,52 @@
+.game-container {
+    position: relative;
+    height: 100vh;
+    background-color: #161623;
+    overflow: hidden;
+}
+
+.game-container:before {
+    content: '';
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    background: linear-gradient(#0061ff, #60efff);
+    border-radius: 50%;
+    top: -10rem;
+    left: -5rem;
+}
+
+.game-container:after {
+    content: '';
+    position: absolute;
+    width: 16rem;
+    height: 16rem;
+    background: linear-gradient(#42047e, #07f49e);
+    border-radius: 50%;
+    bottom: -10rem;
+    right: -5rem;
+}
+
+.game-container .game-content {
+    display: flex;
+    position: absolute;
+    left: 2.5%;
+    top: 2.5%;
+    height: 95%;
+    width: 95%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.65rem;
+    box-shadow: 0 25px 45px rgba(0, 0,0, 0.1);
+    z-index: 2;
+    backdrop-filter: blur(25px);
+    color: #edf2f4 !important;
+}
+
+.game-container .game-content .question-counter {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #edf2f4;
+}

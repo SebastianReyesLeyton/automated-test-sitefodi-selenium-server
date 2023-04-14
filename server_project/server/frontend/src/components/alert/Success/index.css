@@ -1,0 +1,32 @@
+.success-alert-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #008000 !important;
+
+    position: absolute;
+    top: 0.75rem;
+    max-width: 80%;
+    z-index: 2;
+}
+
+.success-title {
+    font-weight: bold;
+    color: #f1faee;
+    font-size: 0.9rem;
+}
+
+.success-alert-message span:last-child {
+    color: #f1faee;
+}
+
+.success-left-icon {
+   color: rgba(241, 250, 238, 0.95);
+}
+
+.success-icon-close {
+    padding-bottom: 3px;
+    padding-right: 3px;
+    color: #f1faee;
+    cursor: pointer;
+}

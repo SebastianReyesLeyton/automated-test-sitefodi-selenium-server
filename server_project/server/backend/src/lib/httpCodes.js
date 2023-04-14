@@ -1,0 +1,13 @@
+const SUCCESS = 200,
+      BAD_REQUEST = 400,
+      UNAUTHORIZED = 401,
+      FORBIDDEN = 402,
+      INTERNAL_ERROR = 500;
+
+export {
+    SUCCESS,
+    BAD_REQUEST,
+    UNAUTHORIZED,
+    FORBIDDEN,
+    INTERNAL_ERROR
+}

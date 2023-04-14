@@ -1,0 +1,89 @@
+.avatars-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 0.5rem*2);
+    height: calc(100% - 1.5rem*2);
+    padding: 1.5rem 0.5rem;
+    overflow: auto;
+}
+
+.avatars-container .avatars-options {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.avatars-container .avatars-options .avatar-option:hover {
+    cursor: pointer;
+}
+
+.avatars-container .avatars-options .avatar-option-container {
+    position: relative;
+    width: clamp(2.5rem, 80%, calc(5rem - 0.4rem));
+    height: clamp(2.5rem, 80%, calc(5rem - 0.4rem));
+    padding: 2px;
+    margin: 0.2rem;
+    transition: all ease-in 500ms;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: avatarOptionEffect calc(250ms + var(--i));
+}
+
+@keyframes avatarOptionEffect {
+    0% {
+        opacity: 0;
+        margin-bottom: 1rem;
+    }
+    70% {
+        opacity: 0.1;
+        margin-bottom: 0.5rem;
+    }
+    100% {
+        opacity: 1;
+        margin-bottom: 0.2rem;
+    }
+}
+
+.avatars-container .avatars-options .avatar-option-container:before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    left: 50%;
+    height: 0%;
+    background-color: aqua;
+    animation: rotationAvatar 2s linear infinite;
+    transition: all ease-in-out 500ms;
+}
+
+.avatars-container .avatars-options .avatar-option-container:hover:before {
+    height: 200%;
+    top: -50%;
+}
+
+.avatars-container .avatars-options .avatar-option-container .avatar-option {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+.avatars-container .avatars-options div:hover:before {
+    width: clamp(2.5rem, 80%, 4.5rem);
+    background-color: red;
+}
+
+@keyframes rotationAvatar {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
